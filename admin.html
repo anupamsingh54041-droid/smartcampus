@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCampus - Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container {
+            width: 90%;
+            max-width: 950px;
+            margin: 30px auto;
+        }
+        .admin-card {
+            background: white;
+            padding: 22px;
+            margin: 18px 0;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .admin-card h2 {
+            color: #174ea6;
+        }
+        .admin-card input,
+        .admin-card select,
+        .admin-card textarea {
+            width: 100%;
+            padding: 13px;
+            margin: 8px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        .admin-card button {
+            background: #174ea6;
+            color: white;
+            border: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            color: #174ea6;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1>SmartCampus</h1>
+    <p>Admin Management Panel</p>
+</header>
+
+<a class="back-link" href="dashboard.html">← Back to Dashboard</a>
+
+<main class="admin-container">
+
+    <h1>Admin Dashboard</h1>
+    <p>Manage your college information.</p>
+
+    <section class="admin-card">
+        <h2>Add Student</h2>
+
+        <form id="studentForm">
+            <label>Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter student name" required>
+
+            <label>Student Email</label>
+            <input type="email" id="studentEmail" placeholder="Enter email" required>
+
+            <label>Course</label>
+            <input type="text" id="studentCourse" placeholder="Enter course" required>
+
+            <button type="submit">Add Student</button>
+        </form>
+        <p id="studentMessage"></p>
+    </section>
+
+    <section class="admin-card">
+        <h2>Post College Notice</h2>
+
+        <form id="noticeForm">
+            <label>Notice Title</label>
+            <input type="text" id="noticeTitle" placeholder="Enter notice title" required>
+
+            <label>Notice Details</label>
+            <textarea id="noticeDetails" placeholder="Enter notice details" required></textarea>
+
+            <button type="submit">Publish Notice</button>
+        </form>
+        <p id="noticeMessage"></p>
+    </section>
+
+    <section class="admin-card">
+        <h2>College Management</h2>
+        <p>Student records and college notices can be managed here.</p>
+    </section>
+
+</main>
+
+<script>
+document.getElementById("studentForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("studentMessage").textContent =
+        "Student form submitted successfully (demo only).";
+    this.reset();
+});
+
+document.getElementById("noticeForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("noticeMessage").textContent =
+        "Notice published successfully (demo only).";
+    this.reset();
+});
+</script>
+
+</body>
+</html>

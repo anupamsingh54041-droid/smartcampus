@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCampus - Teacher Panel</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .teacher-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 35px auto;
+        }
+
+        .teacher-card {
+            background: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .teacher-card h2 {
+            color: #174ea6;
+        }
+
+        .teacher-card label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        .teacher-card input,
+        .teacher-card select {
+            width: 100%;
+            padding: 14px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .teacher-card button {
+            margin-top: 20px;
+            padding: 14px 25px;
+            background: #174ea6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+        }
+
+        .back-link {
+            color: #174ea6;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <h1>SmartCampus</h1>
+    <p>Teacher Management Panel</p>
+</header>
+
+<main class="teacher-container">
+
+    <a class="back-link" href="dashboard.html">
+        ← Back to Dashboard
+    </a>
+
+    <h1>Teacher Dashboard</h1>
+    <p>Manage attendance and student marks.</p>
+
+    <section class="teacher-card">
+        <h2>Mark Student Attendance</h2>
+
+        <form id="attendanceForm">
+            <label>Student Name</label>
+            <input type="text" id="studentName"
+                placeholder="Enter student name" required>
+
+            <label>Attendance Status</label>
+            <select id="attendanceStatus" required>
+                <option value="">Select status</option>
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+            </select>
+
+            <button type="submit">Save Attendance</button>
+        </form>
+
+        <p id="attendanceMessage"></p>
+    </section>
+
+    <section class="teacher-card">
+        <h2>Enter Student Marks</h2>
+
+        <form id="marksForm">
+            <label>Student Name</label>
+            <input type="text" id="marksStudent"
+                placeholder="Enter student name" required>
+
+            <label>Subject</label>
+            <input type="text" id="subject"
+                placeholder="Enter subject" required>
+
+            <label>Marks</label>
+            <input type="number" id="marks"
+                placeholder="Enter marks (0-100)"
+                min="0" max="100" required>
+
+            <button type="submit">Save Marks</button>
+        </form>
+
+        <p id="marksMessage"></p>
+    </section>
+
+</main>
+
+<script>
+document.getElementById("attendanceForm")
+.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("attendanceMessage").textContent =
+        "Attendance saved successfully (demo only).";
+
+    this.reset();
+});
+
+document.getElementById("marksForm")
+.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("marksMessage").textContent =
+        "Student marks saved successfully (demo only).";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>

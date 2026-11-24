@@ -1,0 +1,162 @@
+
+/* SmartCampus - College Portal */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4fa;
+    color: #263445;
+    min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+    background: #174ea6;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 15px;
+    color: #e1eaff;
+}
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+/* Welcome Section */
+
+.welcome {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.welcome h2 {
+    color: #174ea6;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Login Section */
+
+.login-section {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.login-section h2 {
+    text-align: center;
+    color: #174ea6;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+/* Form */
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#loginForm label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#loginForm input,
+#loginForm select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fff;
+    outline: none;
+}
+
+#loginForm input:focus,
+#loginForm select:focus {
+    border-color: #174ea6;
+    box-shadow: 0 0 0 3px rgba(23, 78, 166, 0.12);
+}
+
+/* Login Button */
+
+#loginForm button {
+    margin-top: 25px;
+    padding: 14px;
+    background: #174ea6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#loginForm button:active {
+    background: #103b80;
+}
+
+/* Message */
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+    color: #174ea6;
+    font-size: 14px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    color: #667085;
+    font-size: 13px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+    .container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .login-section {
+        padding: 25px 18px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+}

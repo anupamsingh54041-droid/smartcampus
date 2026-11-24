@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCampus - Student Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .student-container {
+            width: 90%;
+            max-width: 950px;
+            margin: 35px auto;
+        }
+
+        .student-card {
+            background: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .student-card h2 {
+            color: #174ea6;
+            margin-bottom: 15px;
+        }
+
+        .student-card p {
+            color: #667085;
+            line-height: 1.7;
+        }
+
+        .student-card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .student-card th,
+        .student-card td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .student-card th {
+            background: #174ea6;
+            color: white;
+        }
+
+        .back-link {
+            color: #174ea6;
+            font-size: 18px;
+        }
+
+        @media(max-width: 500px) {
+            .student-card {
+                padding: 18px;
+            }
+
+            .student-card table {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <h1>SmartCampus</h1>
+    <p>Student Portal</p>
+</header>
+
+<main class="student-container">
+
+    <a class="back-link" href="dashboard.html">
+        ← Back to Dashboard
+    </a>
+
+    <h1>Student Dashboard</h1>
+    <p>Welcome to your college student portal.</p>
+
+    <!-- Student Profile -->
+    <section class="student-card">
+        <h2>My Profile</h2>
+        <p><strong>Student Name:</strong> Demo Student</p>
+        <p><strong>Student ID:</strong> SC2026001</p>
+        <p><strong>Course:</strong> BCA</p>
+        <p><strong>Department:</strong> Computer Science</p>
+    </section>
+
+    <!-- Attendance -->
+    <section class="student-card">
+        <h2>My Attendance</h2>
+
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Total Classes</th>
+                <th>Present</th>
+            </tr>
+
+            <tr>
+                <td>Java</td>
+                <td>40</td>
+                <td>35</td>
+            </tr>
+
+            <tr>
+                <td>Web Development</td>
+                <td>35</td>
+                <td>30</td>
+            </tr>
+
+            <tr>
+                <td>Database</td>
+                <td>30</td>
+                <td>26</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Marks -->
+    <section class="student-card">
+        <h2>My Marks</h2>
+
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Maximum Marks</th>
+                <th>Obtained Marks</th>
+            </tr>
+
+            <tr>
+                <td>Java</td>
+                <td>100</td>
+                <td>85</td>
+            </tr>
+
+            <tr>
+                <td>Web Development</td>
+                <td>100</td>
+                <td>90</td>
+            </tr>
+
+            <tr>
+                <td>Database</td>
+                <td>100</td>
+                <td>82</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Timetable -->
+    <section class="student-card">
+        <h2>My Timetable</h2>
+
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Subject</th>
+                <th>Time</th>
+            </tr>
+
+            <tr>
+                <td>Monday</td>
+                <td>Java</td>
+                <td>10:00 AM</td>
+            </tr>
+
+            <tr>
+                <td>Tuesday</td>
+                <td>Web Development</td>
+                <td>11:00 AM</td>
+            </tr>
+
+            <tr>
+                <td>Wednesday</td>
+                <td>Database</td>
+                <td>12:00 PM</td>
+            </tr>
+
+            <tr>
+                <td>Thursday</td>
+                <td>Java Lab</td>
+                <td>10:00 AM</td>
+            </tr>
+
+            <tr>
+                <td>Friday</td>
+                <td>Web Lab</td>
+                <td>11:00 AM</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Notices -->
+    <section class="student-card">
+        <h2>College Notices</h2>
+
+        <h3>Welcome to SmartCampus</h3>
+        <p>Welcome to the new digital college management portal.</p>
+
+        <h3>Examination Notice</h3>
+        <p>Students should check their examination timetable regularly.</p>
+
+        <h3>Attendance Notice</h3>
+        <p>Students are requested to attend their regular classes.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 SmartCampus | Student Portal</p>
+</footer>
+
+</body>
+</html>
